@@ -58,15 +58,15 @@ class Servidor():
             if str(msg.decode('ascii')) == 'y':
                 for i in range(len(self._altitude)):
                     self._data = {"Altitude" : self._altitude[i],
-                                  "Latitude" : self._latitude[i],
-                                  "Longitude" : self._longitude[i],
-                                  "Principal Paraquedas Estabilizador" : self._acionamentoPPE[i],
-                                  "Redundancia Paraquedas Estabilizador" : self._acionamentoPPP[i],
-                                  "Acelerometro" : {"x" : self._acX[i] , "y" : self._acY[i] , "z" : self._acZ[i]},
-                                  "Giroscopio" : {"x" : self._gyX[i] , "y" : self._gyY[i] , "z" : self._gyZ[i]}
-                                 }
+                                    "Latitude" : self._latitude[i],
+                                    "Longitude" : self._longitude[i],
+                                    "Principal Paraquedas Estabilizador" : self._acionamentoPPE[i],
+                                    "Redundancia Paraquedas Estabilizador" : self._acionamentoPPP[i],
+                                    "Acelerometro" : {"x" : self._acX[i] , "y" : self._acY[i] , "z" : self._acZ[i]},
+                                    "Giroscopio" : {"x" : self._gyX[i] , "y" : self._gyY[i] , "z" : self._gyZ[i]}
+                                    }
                     self._data = json.dumps(self._data)
-                    self._tcp.send(self._data.encode())
+                    con.send(self._data.encode())
                     print("Dados enviados.")
         except OSError as e:
             print(f'Erro na conexao {client} : {e.args}')
