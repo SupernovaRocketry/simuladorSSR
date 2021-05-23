@@ -43,8 +43,8 @@ class Servidor():
         self._acionamentoPPE = [0]*2999 + [1] + [0]*3000                          # Simulando a confirmação do acionamento principal do paraquedas estabilizador
         self._acionamentoRPE = [0]*3004 + [1] + [0]*2995                          # Simulando a confirmação do acionamento redundante do paraquedas estabilizador
         self._acionamentoPPP = [0]*3449 + [1] + [0]*2500                          # Simulando a confirmação do acionamento principal do paraquedas principal
-        self._acX = [2+random.randrange(-.2, .2) for x in range(6000)]            # Simulando a aceleração no eixo x
-        self._acY = [3+random.randrange(-.3, .3) for x in range(6000)]            # Simulnado a aceleração no eixo y
+        self._acX = [2+random.uniform(-.2, .2) for x in range(6000)]              # Simulando a aceleração no eixo x
+        self._acY = [3+random.uniform(-.3, .3) for x in range(6000)]              # Simulnado a aceleração no eixo y
         self._acZ = [50+random.randrange(-5, 5) for x in range(6000)]             # Simulando a aceleração no eixo z
         self._gyX = [100+random.randrange(-10,10) for x in range(6000)]           # Simulando a angulação no eixo x
         self._gyY = [300+random.randrange(-30,30) for x in range(6000)]           # Simulando a angulação no eixo y
