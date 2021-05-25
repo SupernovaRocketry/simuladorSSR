@@ -1,6 +1,7 @@
 import socket # Biblioteca responsavel pela comunicação socket
 import json   # Biblioteca usada para envio de Json
 import random # Gerador de numeros aletorios para os dados
+import time   # Biblioteca usada para parar o codigo
 
 class Servidor():
     """
@@ -68,6 +69,7 @@ class Servidor():
                     self._data = json.dumps(self._data)
                     con.send(self._data.encode())
                     print("Dados enviados.")
+                    time.sleep(0.3)
         except OSError as e:
             print(f'Erro na conexao {client} : {e.args}')
             return
