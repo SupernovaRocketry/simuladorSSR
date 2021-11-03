@@ -54,7 +54,8 @@ class Servidor():
                                     "Principal Paraquedas Estabilizador" : dados._acionamentoPPE[i],
                                     "Redundancia Paraquedas Estabilizador" : dados._acionamentoPPP[i],
                                     "Acelerometro" : {"x" : dados._acX[i] , "y" : dados._acY[i] , "z" : dados._acZ[i]},
-                                    "Giroscopio" : {"x" : dados._gyX[i] , "y" : dados._gyY[i] , "z" : dados._gyZ[i]}
+                                    "Giroscopio" : {"x" : dados._gyX[i] , "y" : dados._gyY[i] , "z" : dados._gyZ[i]},
+                                    "RSSI" : dados._RSSI[i]
                                     }
                     self._data = json.dumps(self._data)
                     con.send(self._data.encode())

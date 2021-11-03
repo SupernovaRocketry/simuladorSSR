@@ -21,3 +21,4 @@ class Simulador():
         self._gyX = [100+random.randrange(-10,10) for x in range(6000)]           # Simulando a angulação no eixo x
         self._gyY = [300+random.randrange(-30,30) for x in range(6000)]           # Simulando a angulação no eixo y
         self._gyZ = [700+random.randrange(-15,15) for x in range(6000)]           # Simulando a angulação no eixo z
+        self._RSSI = [60+random.randrange(-30,30) for x in range(6000)]           # Simulando os dados de RSSI
