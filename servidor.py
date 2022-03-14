@@ -53,6 +53,9 @@ class Servidor():
                                     "Longitude" : dados._longitude[i],
                                     "Principal Paraquedas Estabilizador" : dados._acionamentoPPE[i],
                                     "Redundancia Paraquedas Estabilizador" : dados._acionamentoPPP[i],
+                                    "Comercial Paraquedas Estabilizador" : dados._acionamentoCPE[i],
+                                    "Principal Paraquedas Principal" : dados._acionamentoPPP[i],
+                                    "Comercial Paraquedas Principal" : dados._acionamentoCPP[i],
                                     "Acelerometro" : {"x" : dados._acX[i] , "y" : dados._acY[i] , "z" : dados._acZ[i]},
                                     "Giroscopio" : {"x" : dados._gyX[i] , "y" : dados._gyY[i] , "z" : dados._gyZ[i]},
                                     "RSSI" : dados._RSSI[i]
