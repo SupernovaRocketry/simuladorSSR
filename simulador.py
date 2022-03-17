@@ -12,11 +12,11 @@ class Simulador():
         self._altitude = [x for x in range(3000)] + [3000-x for x in range(3000)] # Simulando dados de altitude entre 0 e 3000.
         self._latitude = [10+random.randrange(-2,2) for x in range(6000)]         # Simulando dados de latitude entre 8 e 12.
         self._longitude = [20+random.randrange(-4,4) for x in range(6000)]        # Simulando dados de longitude entre 16 e 24.
-        self._acionamentoPPE = [0]* 10 + [1]*2999 + [1] + [1]*3000                # Simulando a confirmação do acionamento principal do paraquedas estabilizador
-        self._acionamentoRPE = [1]*3004 + [1] + [1]*2995                          # Simulando a confirmação do acionamento redundante do paraquedas estabilizador
-        self._acionamentoCPE = [1]*3449 + [1] + [1]*2500                          # Simulando a confirmação do acionamento comercial do paraquedas estabilizador
-        self._acionamentoPPP = [1]*3449 + [1] + [1]*2500                          # Simulando a confirmação do acionamento principal do paraquedas principal
-        self._acionamentoCPP = [1]*3449 + [1] + [1]*2500                          # Simulando a confirmação do acionamento comercial do paraquedas principal        
+        self._acionamentoPPE = [0]*2999 + [1]*3001                                # Simulando a confirmação do acionamento principal do paraquedas estabilizador
+        self._acionamentoRPE = [0]*3004 + [1]*2996                                # Simulando a confirmação do acionamento redundante do paraquedas estabilizador
+        self._acionamentoCPE = [0]*2999 + [1]*3001                                # Simulando a confirmação do acionamento comercial do paraquedas estabilizador
+        self._acionamentoPPP = [0]*3449 + [1]*2501                                # Simulando a confirmação do acionamento principal do paraquedas principal
+        self._acionamentoCPP = [0]*3449 + [1]*2501                                # Simulando a confirmação do acionamento comercial do paraquedas principal        
         self._acX = [2+random.uniform(-.2, .2) for x in range(6000)]              # Simulando a aceleração no eixo x
         self._acY = [3+random.uniform(-.3, .3) for x in range(6000)]              # Simulnado a aceleração no eixo y
         self._acZ = [35+random.randrange(-5, 5) for x in range(6000)]             # Simulando a aceleração no eixo z

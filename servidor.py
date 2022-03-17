@@ -52,7 +52,7 @@ class Servidor():
                                     "Latitude" : dados._latitude[i],
                                     "Longitude" : dados._longitude[i],
                                     "Principal Paraquedas Estabilizador" : dados._acionamentoPPE[i],
-                                    "Redundancia Paraquedas Estabilizador" : dados._acionamentoPPP[i],
+                                    "Redundancia Paraquedas Estabilizador" : dados._acionamentoRPE[i],
                                     "Comercial Paraquedas Estabilizador" : dados._acionamentoCPE[i],
                                     "Principal Paraquedas Principal" : dados._acionamentoPPP[i],
                                     "Comercial Paraquedas Principal" : dados._acionamentoCPP[i],
@@ -63,7 +63,7 @@ class Servidor():
                     self._data = json.dumps(self._data)
                     con.send(self._data.encode())
                     print("Dados enviados.")
-                    time.sleep(0.3)
+                    time.sleep(0.05)
         except OSError as e:
             print(f'Erro na conexao {client} : {e.args}')
             return
